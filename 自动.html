@@ -1,0 +1,64 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr  9 14:36:41 2024
+
+@author: Administrator
+"""
+print("欢迎来到自动生成系统")
+print("输入5确认使用，输入6确认退出")
+re = input("是否使用自动生成系统:")
+RE = int(re)
+if RE == 5:
+    import random
+    nameList = []
+    nmlst1 = "赵谦孙李周武郑王冯陈楚卫姜沈杭杨"
+    nmlst2 = "别后竹窗风雪夜一灯明暗覆吴图"
+    nmlst3 = "问渠那得清如许为有源头活水来"
+    #随机生成名字
+    name = random.choice(nmlst1) + random.choice(nmlst2) + random.choice(nmlst3)
+    nameList.append(name)
+    #随机生成年龄
+    yearList = []
+    year = random.randint(15,35)
+    yearList.append(year)
+    #随机生成家世
+    backList = []
+    blst1 = ("罪臣之后","一品官员之后","天潢贵胄","非人非鬼，非神非魔")
+    back = random.choice(blst1)
+    backList.append(back)
+    #输出
+    print("欢迎使用自动生成系统")
+    print("1随机生成一份，2随机生成您需要的份数，3结束本次服务")
+    window = input("请输入你的需求:")
+    LST = int(window)
+    if LST == 1:
+         print(nameList + yearList + backList)
+    elif LST == 2:
+        num = input("请输入您需要的份数:")
+        NUM = int(num)
+        for i in range(NUM):
+            #随机生成名字
+            nameList = []
+            nmlst1 = "赵谦孙李周武郑王冯陈楚卫姜沈杭杨"
+            nmlst2 = "别后竹窗风雪夜一灯明暗覆吴图"
+            nmlst3 = "问渠那得清如许为有源头活水来"
+            name = random.choice(nmlst1) + random.choice(nmlst2) + random.choice(nmlst3)
+            nameList.append(name)
+            #随机生成年龄
+            yearList = []
+            year = random.randint(15,35)
+            yearList.append(year)
+            #随机生成家世
+            backList = []
+            blst1 = ("罪臣之后","一品官员之后","天潢贵胄","非人非鬼，非神非魔")
+            back = random.choice(blst1)
+            backList.append(back)
+            print(nameList + yearList + backList)
+    elif LST == 3:
+        print("感谢您的使用，再见")
+    else:
+        print("无法识别，请重新输入您的需求")
+elif RE == 6:
+    print("期待您的下次使用")
+else:
+    print("无法识别，请重新输入")
